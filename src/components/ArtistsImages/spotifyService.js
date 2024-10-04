@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const clientId =  REACT_APP_SPOTIFY_CLIENT_ID
-const clientSecret = REACT_APP_SPOTIFY_CLIENT_SECRET
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
+const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+
 
 export const getToken = async () => {
     const result = await axios.post('https://accounts.spotify.com/api/token', 
